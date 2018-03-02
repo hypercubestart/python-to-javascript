@@ -1,7 +1,7 @@
 Instructions
 
 1. Install python 3.5/3.6, transcrypt, nodejs
-2. npm start
+2. npm start while running cmd as admin
 3. go to "localhost:3000"
 4. 1st text box = file name
    2nd text box = html template to use
