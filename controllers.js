@@ -6,7 +6,7 @@ const path = require('path');
 var cmdGetAsync = Promise.promisify(cmd.get, { multiArgs: true, context: cmd });
 
 var runTranscrypt = function(filepath) {
-    return cmdGetAsync('transcrypt -b ' + filepath);
+    return cmdGetAsync('sudo transcrypt -b ' + filepath);
 }
 
 exports.convert = function(req, res) {
