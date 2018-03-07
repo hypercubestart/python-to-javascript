@@ -21,7 +21,7 @@ exports.convert = function(req, res) {
     }).then(function() {
         return res.sendFile(scriptpath);
     }).catch(function(err) {
-        res.json(err);
+        res.json({err: err});
         console.error(err);
     });
 }
