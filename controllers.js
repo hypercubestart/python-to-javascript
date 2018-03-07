@@ -14,11 +14,12 @@ exports.convert = function(req, res) {
     var filepath = './transcrypt/' + filename + '.py';
 
     var scriptname = filename + '.js';
+    var scriptpath = './transcrypt/__javascript__/' + scriptname;
 
     fs.writeFileAsync(filepath, req.body.python).then(function() { 
         return runTranscrypt(filepath);
     }).then(function() {
-        res.redirect(scriptname);
+        return res.sendFile(scriptpath);
     }).catch(function(err) {
         res.json(err);
         console.error(err);

@@ -8,8 +8,6 @@ const helmet = require('helmet'); //security
 const app = express();
 app.set('view engine', 'pug')
 
-app.use(express.static('transcrypt/__javascript__'));
-
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
